@@ -16,7 +16,7 @@ $productos = [$producte1, $producte2];
 $productos_mostrados = "";
 $producto_detalles = "";
 
-// Comprobar si se ha enviado el formulario
+// Comprobar envio de formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Mostrar productos según la categoría seleccionada
     if (isset($_POST['categoria'])) {
@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" name="nombreProducto" placeholder="Nombre del Producto" required>
             <input type="text" name="descripcionProducto" placeholder="Descripción del Producto" required>
             <input type="number" name="precioProducto" placeholder="Precio" step="0.01" required>
-            <!-- Selección de la categoría para el nuevo producto -->
+
             <select name="categoriaProducto" required>
                 <option value="">Selecciona una Categoría</option>
                 <?php foreach ($categorias as $index => $categoria): ?>
